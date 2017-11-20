@@ -1,12 +1,21 @@
 class QuestionsController < ApplicationController
+  def home
+  end
+
 
   def ask
   end
 
   def answer
-  end
+    @answer = params[:questions]
 
-  def home
+    @answer_to = @answer
+      if @answer_to == "I am going to work"
+        @answer_to = "Great!"
+      elsif @answer_to.include? "?"
+        @answer_to = "Silly question, get dressed and go to work!"
+      else @answer_to = "I don't care, get dressed and go to work!"
+    end
   end
 
 end

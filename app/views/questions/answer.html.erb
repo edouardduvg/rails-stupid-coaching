@@ -1,1 +1,21 @@
+<h1><strong>Stupid Coaching</strong></h1>
 
+<div class="container">
+  <div class="wrapper">
+    <div class="alert alert-warning" role=“alert”>
+      <h2><%= @answer %></h2>
+      <p> –You </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="wrapper">
+    <div class="alert alert-info" role=“alert”>
+      <h2><%= @answer_to %></h2>
+      <p> – Coach: </p>
+    </div>
+  </div>
+</div>
+
+<div class="btn" type="button"> <%= link_to "ask another question", ask_path %></div>
